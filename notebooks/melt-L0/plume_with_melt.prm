@@ -1,0 +1,160 @@
+set Dimension                              = 2
+set Start time                             = 0
+set End time                               = 5e6
+set CFL number                             = 1
+set Use years instead of seconds           = true
+set Output directory                       = plume-with-melt
+set Adiabatic surface temperature          = 1623
+set Use operator splitting                 = true
+set Surface pressure                       = 3e9
+
+# Each inner iteration is solved up to this linear
+# solver tolerance.
+subsection Solver parameters
+  subsection Stokes solver parameters
+    set Linear solver tolerance                = 1e-4
+    set Number of cheap Stokes solver steps    = 200
+  end
+  
+  subsection Operator splitting parameters
+    set Reaction time step                     = 1e4
+    set Reaction time steps per advection step = 10
+  end
+end
+
+# A rectangular box of 2000x1000 km
+subsection Geometry model
+  set Model name = box
+    subsection Box
+      set X extent = 2000000
+      set Y extent = 1000000
+      set X repetitions = 2
+   end
+end
+
+# Vertical gravity
+subsection Gravity model
+  set Model name = vertical
+  subsection Vertical
+    set Magnitude = 9.81
+  end
+end
+
+
+subsection Mesh refinement
+  set Initial adaptive refinement        = 1
+  set Initial global refinement          = 4
+  set Refinement fraction                = 0.70
+  set Coarsening fraction                = 0.1
+  set Minimum refinement level           = 4
+  set Strategy                           = composition threshold
+
+  subsection Composition threshold
+   set Compositional field thresholds = 1e-3, 1e-4
+  end
+  set Time steps between mesh refinement = 5
+end
+
+
+subsection Heating model
+  set List of model names = shear heating
+end
+
+# Initial temperature is specified according to the 
+# lithospheric-age based plate cooling model. 
+subsection Initial temperature model
+  set List of model names =  adiabatic, function
+  set List of model operators = add
+  
+  subsection Adiabatic
+    set Age top boundary layer    = 1e8
+    set Age bottom boundary layer = 5e7
+    
+    subsection Function
+      set Function expression       = 0;0
+    end
+  end
+
+  subsection Function
+    set Function constants        = r=100000, amplitude=100
+    set Function expression       = if((x-1000e3)*(x-1000e3)+y*y<r*r,amplitude,0)
+  end
+end
+
+subsection Boundary temperature model
+  set List of model names                     = box
+  set Fixed temperature boundary indicators   = 2,3
+
+  subsection Box
+    set Bottom temperature = 3773
+    set Top temperature    = 273
+  end
+end
+
+subsection Boundary velocity model
+  set Tangential velocity boundary indicators = 0,1,3,2
+end
+
+subsection Boundary composition model
+  set Model name =  initial composition
+end
+
+subsection Compositional fields
+   set Number of fields = 2
+   set Names of fields  = peridotite, porosity
+end
+
+subsection Material model
+  set Model name = melt simple
+
+  subsection Melt simple
+    set Reference shear viscosity = 2e20
+    set Reference solid density = 3300
+    set Reference melt density = 3200
+    set Melting time scale for operator splitting = 1e4
+    set Melt extraction depth = 20e3
+    set Exponential melt weakening factor = 20
+  end
+end
+
+subsection Melt settings
+  # We want to solve the McKenzie Equations to track the flow of melt. 
+  set Include melt transport = true
+  set Heat advection by melt = true
+end
+
+subsection Initial composition model
+  set Model name = function
+
+  subsection Function
+    set Function constants        = r=100000, amplitude=1
+    set Function expression       = if((x-1000e3)*(x-1000e3)+y*y<r*r,amplitude,0);0
+  end
+end
+
+
+# We output visualization files every million years.
+subsection Postprocess
+  set List of postprocessors = visualization, velocity statistics, temperature statistics, melt statistics
+
+  subsection Visualization
+    set Time steps between graphical output = 5
+    set List of output variables      = strain rate, material properties, melt material properties
+    set Interpolate output            = true
+    subsection Melt material properties
+     set List of properties = permeability,  is melt cell
+   end
+  end
+end
+
+subsection Discretization
+  set Stokes velocity polynomial degree    = 2
+  set Composition polynomial degree        = 1	
+  subsection Stabilization parameters
+    set Use limiter for discontinuous composition solution = true
+    set Global composition maximum = 1, 1
+    set Global composition minimum = 0, 0
+    set beta  = 0.5
+    set cR    = 1
+  end
+end
