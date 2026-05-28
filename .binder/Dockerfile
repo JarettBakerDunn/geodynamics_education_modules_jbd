@@ -26,5 +26,5 @@ USER ${NB_USER}
 
 # Clone the education repo so that binder has access to the notebooks.
 USER root
-RUN cd ${HOME}; git clone https://github.com/JarettBakerDunn/geodynamics_education_modules_jbd;
+RUN cd /home; git clone https://github.com/JarettBakerDunn/geodynamics_education_modules_jbd;
 USER ${NB_USER}
