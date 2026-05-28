@@ -17,7 +17,7 @@ RUN apt-get update && apt-get install -y \
     python3-dev \
     && rm -rf /var/lib/apt/lists/*
     
-RUN pip install numpy pandas matplotlib scipy;
+RUN pip install numpy pandas matplotlib scipy meshio;
     
 # Clone the education repo so that binder has access to the notebooks.
 USER root
@@ -30,5 +30,3 @@ USER root
 RUN chown -R ${NB_UID} ${HOME}
 RUN python3 -m pip install --no-cache-dir notebook jupyterlab
 USER ${NB_USER}
-
-# Force rebuild binder
