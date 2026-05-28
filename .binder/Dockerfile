@@ -18,9 +18,9 @@ RUN apt-get update && apt-get install -y \
     && rm -rf /var/lib/apt/lists/*
     
 # Clone the education repo so that binder has access to the notebooks.
-USER root;
-WORKDIR /home;
-RUN git clone https://github.com/JarettBakerDunn/geodynamics_education_modules_jbd; 
+USER root
+WORKDIR /home
+RUN git clone https://github.com/JarettBakerDunn/geodynamics_education_modules_jbd
 
 # Make sure the contents of our repo are in ${HOME}
 COPY . ${HOME}
