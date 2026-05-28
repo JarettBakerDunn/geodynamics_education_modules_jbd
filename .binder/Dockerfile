@@ -7,6 +7,10 @@ ENV USER ${NB_USER}
 ENV HOME /home/${NB_USER}
 
 USER root
+
+RUN adduser --disabled-password \
+    --gecos "Default user" \
+    ${NB_USER}
  
 RUN apt-get update && apt-get install -y \
     python3-pip \
@@ -14,7 +18,7 @@ RUN apt-get update && apt-get install -y \
     && rm -rf /var/lib/apt/lists/*
     
 RUN pip install numpy pandas matplotlib scipy meshio;
-    
+
 # Make sure the contents of our repo are in ${HOME}
 COPY . ${HOME}
 USER root
