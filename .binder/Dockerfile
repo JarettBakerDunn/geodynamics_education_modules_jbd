@@ -23,3 +23,5 @@ USER root
 RUN chown -R ${NB_UID} ${HOME}
 RUN python3 -m pip install --no-cache-dir notebook jupyterlab
 USER ${NB_USER}
+
+RUN cd ${HOME}; git clone https://github.com/JarettBakerDunn/geodynamics_education_modules_jbd;
