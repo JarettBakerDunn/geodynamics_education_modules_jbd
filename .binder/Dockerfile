@@ -1,8 +1,8 @@
 FROM geodynamics/aspect:v3.0.0
 
 # root user is not allowed in binder
-ARG NB_USER=dealii
-ARG NB_UID=1000
+ARG NB_USER=jovyan
+ARG NB_UID=1100
 ENV USER ${NB_USER}
 ENV HOME /home/${NB_USER}
 
@@ -18,10 +18,16 @@ RUN apt-get update && apt-get install -y \
     && rm -rf /var/lib/apt/lists/*
     
 RUN pip install numpy pandas matplotlib scipy meshio;
+    
+# Clone the education repo so that binder has access to the notebooks.
+USER root
+WORKDIR /home
+RUN git clone https://github.com/JarettBakerDunn/geodynamics_education_modules_jbd
 
 # Make sure the contents of our repo are in ${HOME}
 COPY . ${HOME}
 USER root
 RUN chown -R ${NB_UID} ${HOME}
+RUN chown -R 1100:1100 /home/dealii
 RUN python3 -m pip install --no-cache-dir notebook jupyterlab
 USER ${NB_USER}
