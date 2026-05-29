@@ -21,7 +21,7 @@ RUN apt-get update && apt-get install -y \
     python3-dev \
     && rm -rf /var/lib/apt/lists/*
     
-RUN pip install numpy pandas matplotlib scipy;
+RUN pip install numpy pandas matplotlib scipy meshio;
     
 # Make sure the contents of our repo are in ${HOME}
 COPY . ${HOME}
