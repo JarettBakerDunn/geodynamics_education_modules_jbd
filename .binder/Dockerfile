@@ -6,9 +6,6 @@ USER root
 RUN groupmod -g 1100 dealii && \
     usermod -u 1100 -g 1100 dealii
 
-# Update permissions for the home directory
-RUN chown -R dealii:dealii /home/dealii
-
 # root user is not allowed in binder
 ARG NB_USER=jovyan
 ARG NB_UID=1000
