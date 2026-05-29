@@ -32,3 +32,4 @@ RUN chown -R ${NB_UID} ${HOME}
 RUN python3 -m pip install --no-cache-dir notebook jupyterlab
 USER ${NB_USER}
 
+WORKDIR /home/joyvan
