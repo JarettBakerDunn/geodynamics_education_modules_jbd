@@ -1,5 +1,7 @@
 FROM geodynamics/aspect:v3.0.0
 
+USER root
+
 # Modify the existing user dealii
 RUN groupmod -g 1100 dealii && \
     usermod -u 1100 -g 1100 dealii
