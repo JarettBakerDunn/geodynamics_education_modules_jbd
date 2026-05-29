@@ -1,8 +1,8 @@
 FROM geodynamics/aspect:v3.0.0
 
 # Modify the existing user dealii
-RUN groupmod -g ${1100} 'dealii' && \
-    usermod -u ${1100} -g ${1100} 'dealii'
+RUN groupmod -g 1100 dealii && \
+    usermod -u 1100 -g 1100 dealii
 
 # Update permissions for the home directory
 RUN chown -R dealii:dealii /home/dealii
