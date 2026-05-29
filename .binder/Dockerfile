@@ -2,7 +2,7 @@ FROM geodynamics/aspect:v3.0.0
 
 USER root
 
-# Modify the existing user dealii
+# Modify the existing user dealii. our new user jovyan needs to have ID 1000
 RUN groupmod -g 1100 dealii && \
     usermod -u 1100 -g 1100 dealii
 
@@ -32,4 +32,4 @@ RUN chown -R ${NB_UID} ${HOME}
 RUN python3 -m pip install --no-cache-dir notebook jupyterlab
 USER ${NB_USER}
 
-WORKDIR /home/joyvan
+WORKDIR /home/jovyan
