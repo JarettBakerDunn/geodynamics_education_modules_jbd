@@ -8,6 +8,13 @@ RUN apt update && \
 
 RUN echo "dealii:a" | chpasswd
 
+# Create a venv to install packages into
+RUN python3 -m venv /opt/venv
+# "Activate" the venv, so `jupyterhub-singleuser` can be found when the container runs
+ENV PATH /opt/venv/bin:${PATH}
+# Install jupyterhub as well as at least one jupyter frontend
+RUN /opt/venv/bin/pip install jupyterlab
+
 USER dealii
 
 WORKDIR /home/dealii/
