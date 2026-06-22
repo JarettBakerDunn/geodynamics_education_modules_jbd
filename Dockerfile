@@ -9,7 +9,7 @@ RUN apt-get update && apt-get install -y \
     jupyterhub \
     libgeos-dev 
 
-RUN pip3 install --upgrade pyvista[jupyter] imageio numpy pandas scipy meshio tables cartopy jupyterlab matplotlib;
+RUN pip3 install --upgrade pyvista[jupyter] imageio numpy pandas scipy meshio tables cartopy jupyterlab matplotlib burnman autograd;
 RUN apt-get remove -y python3-matplotlib
 RUN echo "dealii:a" | chpasswd
 
