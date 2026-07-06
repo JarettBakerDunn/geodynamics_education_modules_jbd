@@ -31,6 +31,6 @@ RUN python3 -m cartopy.feature.download physical;
 
 WORKDIR /home/dealii/geodynamics_education_modules/source/
 
-CMD ["jupyterhub"]
+CMD jupyterhub --notebook_starts_kernel=False
 
 USER root
