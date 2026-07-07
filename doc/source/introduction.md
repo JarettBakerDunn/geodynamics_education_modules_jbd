@@ -20,27 +20,43 @@ The Table of Contents in the navigation bar shows the high-level summary for eac
 
 This document links directly to limited resources on Binder to run the notebooks. To run ASPECT (and higher resolution runs), we recommend the following options:
 
-Docker:
+### Docker
+
+**Intel / amd64**
 
 ```{code-block} bash
 $ docker pull geodynamics/geodynamics_education_modules:amd64
 $ docker run -p 8000:8000 -it --rm geodynamics/geodynamics_education_modules:amd64
 $ 
 ```
-NOTE: if you are using a computer with an apple chip, use the tag "arm64" instead of "amd64" in the above commands.
 
-Once you have run the commands above, navigate to `localhost:8000` in a browser.
-Log in using the username `dealii` and the password `a` (Jupyterhub requires users to log in, but since this docker image is intended for local use, there is no real need for security of any kind, which is why the password is so short).
-Once you have logged in, navigate to geodynamics_education_modules/source to find the education resources.
+**Apple Silicon**
+```{code-block} bash
+$ docker pull geodynamics/geodynamics_education_modules:arm64
+$ docker run -p 8000:8000 -it --rm geodynamics/geodynamics_education_modules:amd64
+$ 
+```
+
+Once you have run the commands above, open a browser window to:
+
+
+&nbsp; &nbsp; http://localhost:8000/
+
+&nbsp; &nbsp; Username: dealii <br>
+&nbsp; &nbsp; Password: a
+
+Once you have logged in, navigate to geodynamics_education_modules/source/ to find all education resources. The education resources for this series is located in geodynamics/
 
 
 Jetstream:
 
-ADD INSTRUCTIONS ON REQUESTING ACCESS
+These resources can be configured to run on [ACCESS Jetstream.](https://support.access-ci.org/tags/jetstream). Please [inquire](https://geodynamics.org/support/ticket/new).
 
 Hubzero:
 
-ADD INSTRUCTIONS ON USING WITH HUBZERO
+For personal or use by small groups, these notebooks can be accessed via geodynamcis.org.
+
+***COMING SOON*** ........
 
 ## Contributing
 
