@@ -2,6 +2,8 @@ FROM geodynamics/aspect:v3.0.0 AS aspect
 
 USER root
 
+RUN usermod -l geodynamics dealii
+
 ENV DEBIAN_FRONTEND=noninteractive TZ=Etc/UTC
 RUN apt-get update && apt-get install -y \
     python3-pip \
@@ -16,11 +18,11 @@ RUN apt-get remove -y python3-matplotlib
 RUN pip3 install --upgrade pip
 RUN pip3 install cartopy;
 
-RUN echo "dealii:a" | chpasswd
+RUN echo "geodynamics:a" | chpasswd
 
 RUN jupyter nbextension enable --py --sys-prefix widgetsnbextension
 
-USER dealii
+USER geodynamics
 
 WORKDIR /home/dealii/
 

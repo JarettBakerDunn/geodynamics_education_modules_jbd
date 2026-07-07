@@ -37,26 +37,26 @@ $ docker run -p 8000:8000 -it --rm geodynamics/geodynamics_education_modules:amd
 $ 
 ```
 
-Once you have run the commands above, open a browser window to:
+Next, open a browser window to:
 
 
 &nbsp; &nbsp; http://localhost:8000/
 
-&nbsp; &nbsp; Username: dealii <br>
+&nbsp; &nbsp; Username: geodynamics <br>
 &nbsp; &nbsp; Password: a
 
-Once you have logged in, navigate to geodynamics_education_modules/source/ to find all education resources. The education resources for this series is located in geodynamics/
+Once you have logged in, navigate to geodynamics_education_modules/source/ to find all education resources. The education resources for this series is located in geodynamics/ .
 
 
-Jetstream:
+### Jetstream
 
 These resources can be configured to run on [ACCESS Jetstream.](https://support.access-ci.org/tags/jetstream). Please [inquire](https://geodynamics.org/support/ticket/new).
 
-Hubzero:
+### Hubzero
 
-For personal or use by small groups, these notebooks can be accessed via geodynamcis.org.
+For personal or use by small groups, these notebooks can be accessed via geodynamics.org.
 
-***COMING SOON*** ........
+*COMING SOON* ........
 
 ## Contributing
 
