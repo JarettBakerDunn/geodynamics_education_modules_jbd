@@ -42,7 +42,7 @@ Once you have run the commands above, open a browser window to:
 
 &nbsp; &nbsp; http://localhost:8000/
 
-&nbsp; &nbsp; Username: dealii <br>
+&nbsp; &nbsp; Username: geodynamics <br>
 &nbsp; &nbsp; Password: a
 
 Once you have logged in, navigate to geodynamics_education_modules/source/ to find all education resources. The education resources for this series is located in geodynamics/
