@@ -2,6 +2,8 @@ name: Strip Notebook Outputs
 
 on:
   pull_request:
+      paths:
+      - '**.ipynb'
   workflow_dispatch:
 
 permissions:
@@ -15,7 +17,7 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v6
         with:
-          allow-unsafe-pr-checkout: true
+          ref: ${{ github.ref_name }}
 
       - name: Set up Python
         uses: actions/setup-python@v5
