@@ -36,3 +36,4 @@ WORKDIR /home/dealii/geodynamics_education_modules/source/
 CMD ["jupyterhub"]
 
 USER root
+# THIS IS A TEST
