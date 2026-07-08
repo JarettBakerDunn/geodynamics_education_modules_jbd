@@ -4,7 +4,6 @@ on:
   pull_request:
       paths:
       - '**.ipynb'
-  workflow_dispatch:
 
 jobs:
   nbstripout:
@@ -12,8 +11,6 @@ jobs:
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v6
-        with:
-          ref: ${{ github.head_ref }}
 
       - name: Set up Python
         uses: actions/setup-python@v5
