@@ -17,9 +17,6 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v6
-        if: github.event_name == 'pull_request'
-        with:
-          ref: ${{ github.event.pull_request.head.ref }}
       
       - name: Check notebooks are stripped using nbstripout
         uses: kynan/nbstripout@main
