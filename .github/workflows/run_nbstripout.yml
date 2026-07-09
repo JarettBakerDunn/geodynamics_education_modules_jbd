@@ -2,7 +2,7 @@ name: Strip Notebook Outputs
 
 on:
   pull_request_target:
-    types: [opened, synchronize]
+    types: [opened, synchronize,reopened]
     paths:
       - '**.ipynb'
 
