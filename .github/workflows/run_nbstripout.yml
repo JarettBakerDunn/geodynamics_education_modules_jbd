@@ -31,9 +31,15 @@ jobs:
 
       - name: Run nbstripout on all notebooks
         run: |
-          find . -name "*.ipynb" -type f -exec nbstripout --drop-empty-cells {} +
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add .
-          git commit -m "run nbstripout on all notebooks"
-          git push
+          if find . -name "*.ipynb" -exec nbstripout --verify {} +; then
+            echo "All notebooks are already stripped!";
+            exit 0;
+          else
+            find . -name "*.ipynb" -type f -exec nbstripout --drop-empty-cells {} +
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add .
+            git commit -m "run nbstripout on all notebooks"
+            git push
+          fi
+
