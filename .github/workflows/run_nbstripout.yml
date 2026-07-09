@@ -1,20 +1,23 @@
 name: Strip Notebook Outputs
 
 on:
-  pull_request:
-      paths:
+  pull_request_target:
+    types: [opened, synchronize,reopened]
+    paths:
       - '**.ipynb'
 
 permissions: write-all
 
 jobs:
   nbstripout:
+    name: run nbstripout on all notebooks and push changes
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v6
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
+          repository: ${{ github.event.pull_request.head.repo.full_name }}
+          ref: ${{ github.event.pull_request.head.ref }}
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -31,4 +34,4 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add .
           git commit -m "run nbstripout on all notebooks"
-          git push origin HEAD:${{ github.head_ref }}
+          git push
