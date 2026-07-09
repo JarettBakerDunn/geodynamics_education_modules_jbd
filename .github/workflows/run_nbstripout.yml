@@ -5,9 +5,7 @@ on:
       paths:
       - '**.ipynb'
 
-permissions:
-  contents: write
-  pull-requests: write
+permissions: write-all
 
 jobs:
   nbstripout:
