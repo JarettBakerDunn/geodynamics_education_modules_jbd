@@ -50,7 +50,7 @@ Once you have logged in, navigate to geodynamics_education_modules/source/ to fi
 
 ### Jetstream
 
-These resources can be configured to run on [ACCESS Jetstream.](https://support.access-ci.org/tags/jetstream). Please [inquire](https://geodynamics.org/support/ticket/new).
+These resources can be configured to run on [ACCESS Jetstream](https://support.access-ci.org/tags/jetstream). Please [inquire](https://geodynamics.org/support/ticket/new).
 
 ### Hubzero
 
