@@ -18,7 +18,7 @@ The Table of Contents in the navigation bar shows the high-level summary for eac
 
 ## Accessing Notebooks
 
-This document links directly to limited resources on Binder to run the notebooks. To run ASPECT (and higher resolution runs), we recommend the following options:
+To run ASPECT, we recommend the following three options. Docker and Jetstream are suitable for higher-resolution runs, while Hubzero is better for visualizing notebook results. 
 
 ### Docker
 
@@ -52,11 +52,10 @@ Once you have logged in, navigate to geodynamics_education_modules/source/ to fi
 
 These resources can be configured to run on [ACCESS Jetstream](https://support.access-ci.org/tags/jetstream). Please [inquire](https://geodynamics.org/support/ticket/new).
 
-### Hubzero
+### HubZero
+For personal or use by small groups, these notebooks can be accessed via [HubZero resources](https://geodynamics.org/resources/tools) using the `Jupyter Notebook (2020)` tool. However, this tool will not allow for running ASPECT simulations, so it is only suitable for visualizing results.
+We are upgrading the ASPECT Jupyter environment on HubZero to allow for running ASPECT simulations in notebooks. This feature will be available at the end of summer 2026.
 
-For personal or use by small groups, these notebooks can be accessed via geodynamics.org.
-
-*COMING SOON* ........
 
 ## Contributing
 
