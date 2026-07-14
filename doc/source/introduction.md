@@ -53,9 +53,14 @@ Once you have logged in, navigate to geodynamics_education_modules/source/ to fi
 These resources can be configured to run on [ACCESS Jetstream](https://support.access-ci.org/tags/jetstream). Please [inquire](https://geodynamics.org/support/ticket/new).
 
 ### HubZero
-For personal or use by small groups, these notebooks can be accessed via [HubZero resources](https://geodynamics.org/resources/tools) using the `Jupyter Notebook (2020)` tool. However, this tool will not allow for running ASPECT simulations, so it is only suitable for visualizing results.
-We are upgrading the ASPECT Jupyter environment on HubZero to allow for running ASPECT simulations in notebooks. This feature will be available at the end of summer 2026.
+For personal or use by small groups, these notebooks can be accessed via [HubZero resources](https://geodynamics.org/resources/tools) using the `ASPECT Jupyter Notebooks` tool. However, this tool will not work with all modules, but is suitable for visualizing results.
+To access the shared space, you will need to create a linked list to the shared-space using the following command:
 
+```{code-block} bash
+$ ln -s /data/tools/education-modules/ $HOME
+```
+
+After that, you can access the notebooks in the shared space by navigating to `~/education-modules/` in your terminal.
 
 ## Contributing
 
