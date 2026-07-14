@@ -4,11 +4,20 @@
 set Dimension                              = 2
 set Start time                             = 0
 set End time                               = 100000
-set Use years in output instead of seconds = true
+set Use years instead of seconds           = true
 set CFL number                             = 0.001
 set Maximum time step                      = 3e3
 set Output directory                       = ocean-island-loading
 set Pressure normalization                 = no
+set Use operator splitting                 = true
+set Nonlinear solver scheme                = iterated Advection and Stokes
+
+subsection Solver parameters
+  subsection Operator splitting parameters
+    set Reaction time step                     = 1e3
+    set Reaction solver type                   = fixed step
+  end
+end
 
 subsection Geometry model
   set Model name = box
@@ -41,8 +50,8 @@ subsection Discretization
   set Use discontinuous composition discretization = true
   subsection Stabilization parameters
       set Use limiter for discontinuous composition solution = true
-      set Global composition maximum =  1.e11,  1.e11,  1.e11, 1.0
-      set Global composition minimum = -1.e11, -1.e11, -1.e11, 0.0
+      set Global composition maximum =  1.e11,  1.e11,  1.e11, 1.e11,  1.e11,  1.e11, 1.0
+      set Global composition minimum = -1.e11, -1.e11, -1.e11, -1.e11, -1.e11, -1.e11, 0.0
   end
 end
 
@@ -75,8 +84,8 @@ end
 
 # Number and name of compositional fields
 subsection Compositional fields
-  set Number of fields = 4
-  set Names of fields  = ve_stress_xx, ve_stress_yy, ve_stress_xy, lithosphere
+  set Number of fields = 7
+  set Names of fields  = ve_stress_xx, ve_stress_yy, ve_stress_xy, ve_stress_xx_old, ve_stress_yy_old, ve_stress_xy_old, lithosphere
 end
 
 # We set the elastic thickness of the lithosphere to 34 km
@@ -85,7 +94,7 @@ subsection Initial composition model
   subsection Function
     set Variable names      = x,y
     set Function constants  = y0=400000, lithosphere_thickness=34000
-    set Function expression = 0; 0; 0; 0.5+0.5*tanh((y-y0+lithosphere_thickness)/10000)
+    set Function expression = 0; 0; 0; 0; 0; 0; 0.5+0.5*tanh((y-y0+lithosphere_thickness)/10000)
   end
 end
 
@@ -121,8 +130,8 @@ subsection Material model
 
   subsection Viscoelastic
     set Densities            = 3300
-    set Viscosities          = 2.e19, 1.e26, 1.e26, 1.e26, 1.e26
-    set Elastic shear moduli = 1.e12, 1.e12, 1.e12, 1.e12, 70.e9
+    set Viscosities          = 2.e19, 1.e26, 1.e26, 1.e26, 1.e26, 1.e26, 1.e26, 1.e26
+    set Elastic shear moduli = 1.e12, 1.e12, 1.e12, 1.e12, 1.e12, 1.e12, 1.e12, 70.e9
     set Fixed elastic time step     = 1e3
     set Use fixed elastic time step = false
     set Viscosity averaging scheme  = maximum composition
