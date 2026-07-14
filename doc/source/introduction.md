@@ -54,7 +54,7 @@ These resources can be configured to run on [ACCESS Jetstream](https://support.a
 
 ### HubZero
 For personal or use by small groups, these notebooks can be accessed via [HubZero resources](https://geodynamics.org/resources/tools) using the `ASPECT Jupyter Notebooks` tool. However, this tool will not work with all modules, but is suitable for visualizing results.
-To access the shared space, you will need to create a linked list to the shared-space using the following command:
+To access the shared space, you will need to create a symbolic list to the shared-space using the following command:
 
 ```{code-block} bash
 $ ln -s /data/tools/education-modules/ $HOME
