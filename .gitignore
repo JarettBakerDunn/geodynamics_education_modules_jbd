@@ -6,5 +6,5 @@ plume-with-melt*
 plume*
 slab*
 elastic_deformation*
-rifting*
-subduction*
+rifting-L0/rifting*
+subduction-L0/subduction*
