@@ -22,18 +22,9 @@ This document links directly to limited resources on Binder to run the notebooks
 
 ### Docker
 
-**Intel / amd64**
-
 ```{code-block} bash
-$ docker pull geodynamics/geodynamics_education_modules:amd64
-$ docker run -p 8000:8000 -it --rm geodynamics/geodynamics_education_modules:amd64
-$ 
-```
-
-**Apple Silicon**
-```{code-block} bash
-$ docker pull geodynamics/geodynamics_education_modules:arm64
-$ docker run -p 8000:8000 -it --rm geodynamics/geodynamics_education_modules:amd64
+$ docker pull geodynamics/geodynamics_education_modules
+$ docker run -p 8000:8000 -it --rm geodynamics/geodynamics_education_modules
 $ 
 ```
 
