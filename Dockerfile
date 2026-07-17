@@ -12,7 +12,7 @@ RUN apt-get update && apt-get install -y \
     libgeos-dev 
 
 
-RUN pip3 install --upgrade pyvista[jupyter] imageio numpy pandas scipy meshio tables jupyterlab matplotlib burnman autograd ipywidgets widgetsnbextension;
+RUN pip3 install --upgrade pyvista[jupyter] imageio numpy pandas scipy meshio tables jupyterlab matplotlib burnman autograd ipywidgets widgetsnbextension cmcrameri;
 RUN apt-get remove -y python3-matplotlib
 # upgrading pip after installing everything else seems to be required to avoid some version issues.
 RUN pip3 install --upgrade pip
