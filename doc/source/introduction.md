@@ -36,7 +36,7 @@ Next, open a browser window to:
 &nbsp; &nbsp; Username: geodynamics <br>
 &nbsp; &nbsp; Password: a
 
-Once you have logged in, navigate to geodynamics_education_modules/source/ to find all education resources. The education resources for this series are located in geodynamics/ .
+Once you have logged in, navigate to `geodynamics_education_modules/source/` to find all education resources. The education resources for this series are located in `geodynamics/`.
 
 
 ### Jetstream
@@ -44,14 +44,16 @@ Once you have logged in, navigate to geodynamics_education_modules/source/ to fi
 These resources can be configured to run on [ACCESS Jetstream](https://support.access-ci.org/tags/jetstream). Please [inquire](https://geodynamics.org/support/ticket/new).
 
 ### HubZero
-For personal use or use by small groups, these notebooks can be accessed via [HubZero resources](https://geodynamics.org/resources/tools) using the `ASPECT Jupyter Notebooks` tool. However, this tool will not work with all modules, but is suitable for visualizing results.
-To access the shared space, you will need to create a symbolic link to the shared space using the following command:
+For personal use or use by small groups, these notebooks can be accessed via [HubZero resources](https://geodynamics.org/resources/tools) using the `ASPECT Jupyter Notebooks` tool. You must be logged in to geodynamics.org to launch a tool.
+
+This tool currently does not work with all modules that use ASPECT but can be used for visualizing results.
+
+To access the shared space, you will need to create a symbolic link to the shared space. In a new terminal window, use the following command:
 
 ```{code-block} bash
 $ ln -s /data/tools/education-modules/ $HOME
 ```
-
-After that, you can access the notebooks in the shared space by navigating to `~/education-modules/` in your terminal.
+You can access the notebooks in the shared space by navigating to `~/education-modules/`. To run, we recommend copying these notebooks into your own workspace.
 
 ## Contributing
 
