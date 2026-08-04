@@ -51,9 +51,9 @@ This tool currently does not work with all modules that use ASPECT but can be us
 To access the shared space, you will need to create a symbolic link to the shared space. In a new terminal window, use the following command:
 
 ```{code-block} bash
-$ ln -s /data/tools/education-modules/ $HOME
+$ cp -r /data/tools/education-modules/ $HOME
 ```
-You can access the notebooks in the shared space by navigating to `~/education-modules/`. To run, we recommend copying these notebooks into your own workspace.
+You can access the notebooks by navigating inside the copied folder `~/education-modules/source/geodynamics`.
 
 ## Contributing
 
