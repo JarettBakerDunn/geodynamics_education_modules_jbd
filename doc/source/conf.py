@@ -46,5 +46,4 @@ html_theme_options = {
     "use_issues_button": True,
     }
 
-html_extra_path = ["../../assets"]
-# html_static_path = ['_static']
+#html_static_path = ['_static']
