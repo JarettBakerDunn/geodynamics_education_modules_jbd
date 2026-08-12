@@ -1,8 +1,7 @@
-# GEM
 
-```{figure} fig:../../education-gem-notebooks_icon.png 
-    :width: 60%
-```
+
+![ ](../../assets/education-gem-notebooks_icon.png)
+    
 
 <br>
 <br>
