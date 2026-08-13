@@ -48,7 +48,7 @@ For personal use or use by small groups, these notebooks can be accessed via [Hu
 
 This tool currently does not work with all modules that use ASPECT but can be used for visualizing results.
 
-To access the shared space, you will need to create a symbolic link to the shared space. In a new terminal window, use the following command:
+To access the shared space, you will need to copy the modules from the shared drive (read only) to your home directory. In a new terminal window, use the following command:
 
 ```{code-block} bash
 $ cp -r /data/tools/education-modules/ $HOME
