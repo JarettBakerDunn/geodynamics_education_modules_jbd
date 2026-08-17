@@ -8,7 +8,6 @@ ENV DEBIAN_FRONTEND=noninteractive TZ=Etc/UTC
 RUN apt-get update && apt-get install -y \
     python3-pip \
     python3-dev \
-    jupyterhub \
     libgeos-dev 
 
 
@@ -20,8 +19,6 @@ RUN pip3 install cartopy;
 
 RUN echo "geodynamics:a" | chpasswd
 
-RUN jupyter nbextension enable --py --sys-prefix widgetsnbextension
-
 USER geodynamics
 
 WORKDIR /home/dealii/
@@ -31,8 +28,8 @@ RUN cd geodynamics_education_modules; git sparse-checkout set assets source/geod
 
 RUN python3 -m cartopy.feature.download physical;
 
-WORKDIR /home/dealii/geodynamics_education_modules/source/
+WORKDIR /home/dealii/geodynamics_education_modules/
 
-CMD ["jupyterhub"]
+CMD ["jupyter", "lab", "--ip=0.0.0.0", "--port=8000", "--no-browser", "--allow-root", "--ServerApp.token=''"]
 
 USER root
