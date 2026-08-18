@@ -30,6 +30,9 @@ RUN python3 -m cartopy.feature.download physical;
 
 WORKDIR /home/dealii/geodynamics_education_modules/
 
-CMD ["jupyter", "lab", "--ip=0.0.0.0", "--port=8000", "--no-browser", "--allow-root", "--ServerApp.token=''"]
-
 USER root
+RUN chmod +x create_config.sh
+USER geodynamics
+RUN ./create_config.sh
+
+CMD ["jupyter", "lab", "--ip=0.0.0.0", "--port=8000", "--no-browser", "--allow-root", "--ServerApp.token=''"]
