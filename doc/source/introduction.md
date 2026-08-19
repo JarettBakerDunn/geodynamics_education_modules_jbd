@@ -18,7 +18,7 @@ The Table of Contents in the navigation bar shows the high-level summary for eac
 
 ## Accessing Notebooks
 
-To run ASPECT, we recommend the following three options. Docker and Jetstream are suitable for higher-resolution runs, while Hubzero is better for visualizing notebook results. 
+To run ASPECT, we recommend the following options. Docker and Jetstream are suitable for higher-resolution runs, while Hubzero and OneScience platform are better for visualizing notebook results. 
 
 ### Docker
 
