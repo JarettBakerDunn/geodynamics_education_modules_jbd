@@ -1,47 +1,51 @@
 # Elasticity and Flexure
 
-## Description
-
-An introduction to viscoelastic deformation and its application to Glacial Isostatic Adjustment (GIA) and plate bending under applied island loads.
-
-## Learning objectives
-
-### Scientific
-Upon completion of this module you would be familiar with:
-
-- Viscoelastic deformation
-- Bending of plates under a line load
-- Post glacial rebound
-
-### Technical
-Upon completion of this module you will be able to:
-- Run ASPECT from the command line
-- Understand the basic layout of model simulation file
-- Visualize model simulation results
-- Use Python for writing basic plotting routines
-
-## Dependencies
-- Python (> version 3.3) with the following libraries installed:
-  * SciPy
-  * Matplotlib
-  * NumPy
-  * PyTables
-  * glob
- 
-- ASPECT (> version 2.0)
-
-<br>
-
+```{toctree}
 ---
+caption: Overview
+titlesonly:
+maxdepth: 1
+---
+notebooks/elasticity-flexure/elasticity-flexure-L0/0_overview-elasticity-flexure.ipynb
 
-## Table of Contents
+```
 
-- Summary
+```{toctree}
+---
+caption: Viscoelastic Deformation
+titlesonly:
+maxdepth: 1
+---
+notebooks/elasticity-flexure/elasticity-flexure-L0/1_visco_elastic_deformation.ipynb
 
-- Viscoelastic deformation
+```
 
-- Bending of lithosphere under line loads
+```{toctree}
+---
+caption: Flexure of the lithosphere
+titlesonly:
+maxdepth: 1
+---
+notebooks/elasticity-flexure/elasticity-flexure-L0/2_bending_of_lithosphere_under_line_loads.ipynb
 
-- Modeling plate bending
+```
 
-- Plotting the model simulation results
+```{toctree}
+---
+caption: Modeling Plate Bending
+titlesonly:
+maxdepth: 1
+---
+notebooks/elasticity-flexure/elasticity-flexure-L0/3_modeling_plate_bending.ipynb
+
+```
+
+```{toctree}
+---
+caption: Running the model
+titlesonly:
+maxdepth: 1
+---
+notebooks/elasticity-flexure/elasticity-flexure-L0/4_plotting_the_model_simulation_results.ipynb
+
+```

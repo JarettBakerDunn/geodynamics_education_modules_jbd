@@ -16,8 +16,25 @@ extensions = [
     'sphinx.ext.napoleon',
     'sphinx.ext.viewcode',
     'sphinx.ext.githubpages',
+    'sphinx_reredirects',
     'myst_nb',
 ]
+redirects = {
+    "geodynamic-modeling": "notebooks/geodynamic-modeling/geodynamic_modeling-L0/0_main_geodynamic_modeling.html",
+    "elasticity-flexure": "notebooks/elasticity-flexure/elasticity-flexure-L0/0_overview-elasticity-flexure.html",
+}
+myst_enable_extensions = [
+    "dollarmath",
+    "amsmath",
+    "html_image"
+]
+
+# myst-nb settings to generate the plot outputs. This is currently set
+# to never execute the cells.
+nb_execution_mode = "off"
+nb_execution_timeout = -1
+suppress_warnings = ["myst.header"]
+myst_heading_anchors = 4
 
 templates_path = ['_templates']
 
