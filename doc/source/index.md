@@ -1,14 +1,8 @@
-<div align="center" >
+<img src="../../assets/education-gem-notebooks_icon.png" height="500px" align="center">
 
-<div height="500px">
+<br>
 
-![ ](../../assets/education-gem-notebooks_icon.png)
-
-</div>
-
-![ ](../../assets/cig-logo.png)
-
-</div>
+<img src="../../assets/cig-logo.png" align="center" width="300px">
 
 <br>
 <br>
