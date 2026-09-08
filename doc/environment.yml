@@ -8,9 +8,16 @@ dependencies:
   - notebook
   - sphinx
   - sphinx-book-theme
+  - sphinx-reredirects
   - ipykernel
   - nbconvert
   - pandoc
   - pip
+  - matplotlib
+  - cmcrameri
+  - pyvista
+  - meshio
+  - pandas<2.2
+  - imageio
   - pip:
       - nbsphinx
