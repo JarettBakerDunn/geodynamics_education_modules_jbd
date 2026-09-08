@@ -19,7 +19,7 @@
 ---
 caption: Table of Contents
 hidden: True
-maxdepth: 1
+maxdepth: 2
 ---
 preface.rst
 introduction.md
