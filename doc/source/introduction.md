@@ -18,7 +18,7 @@ The Table of Contents in the navigation bar shows the high-level summary for eac
 
 ## Accessing Notebooks
 
-To run ASPECT, we recommend the following options. Docker and Jetstream are suitable for higher-resolution runs, while Hubzero and OneScience platform are better for visualizing notebook results. 
+To run ASPECT, we recommend the following options. Docker and Jetstream are suitable for higher-resolution runs, while Hubzero  platform is better for visualizing notebook results.
 
 ### Docker
 
@@ -51,10 +51,6 @@ To access the shared space, you will need to copy the modules from the shared dr
 $ cp -r /data/tools/education-modules/ $HOME
 ```
 You can access the notebooks by navigating inside the copied folder `~/education-modules/source/geodynamics`.
-
-### OneSciencePlace Pilot
-
-We also provide access to the educational modules using the [OneSciencePlace](https://pilot.onescienceplace.org/) platform. This platform uses the CIG allocation on the Texas Advanced Computing Center to build the docker image provided in our repository. If you are interested in accessing the modules through this platform, please use this [link](https://pilot.onescienceplace.org/app/osptutorialappsgeoeddev). This platform is currently in a pilot phase and is therefore not suitable for classroom teaching or training. It is intended for testing and feedback purposes only.
 
 ## Contributing
 
