@@ -1,46 +1,92 @@
 # Heat Flow
-## Description
 
-An introduction to the conductive heat transfer mechanism within the Earth.
-
-## Learning objectives
-
-### Scientific
-Upon completion of this module you would be familiar with:
-
-- radioactive heat transfer within the Earth
-- the main parameters that influence Earth's continental heat flow
-- geothermal gradient of the lithosphere
-- heat transfer due to cooling of oceanic lithosphere
-
-### Technical
-Upon completion of this module you would know how to use python to:
-- import simple .csv data as DataFrames
-- create simple 2D (x,y) plots using matplotlib
-- plot data on maps with different projections using cartopy and matplotlib
-
-<br>
-
+```{toctree}
 ---
+titlesonly:
+maxdepth: 1
+---
+notebooks/heat-flow/heat-flow-module-L0/0_overview-heat-flow-module.ipynb
 
-## Table of Contents
+```
 
-- Summary
+```{toctree}
+---
+titlesonly:
+maxdepth: 1
+---
+notebooks/heat-flow/heat-flow-module-L0/1_heat_diffusion_equation.ipynb
 
-- Conductive heat transfer equations
+```
 
-- Thermal parameters
+```{toctree}
+---
+titlesonly:
+maxdepth: 1
+---
+notebooks/heat-flow/heat-flow-module-L0/2_thermal_parameters.ipynb
 
-- Thermal conductivity
+```
 
-- Mantle radioactive heat production
+```{toctree}
+---
+titlesonly:
+maxdepth: 1
+---
+notebooks/heat-flow/heat-flow-module-L0/3_thermal_conductivity_from_geotherms.ipynb
 
-- Radioactivity by dominant elements
+```
 
-- World surface heat flow data
+```{toctree}
+---
+titlesonly:
+maxdepth: 1
+---
+notebooks/heat-flow/heat-flow-module-L0/4_mantle_radioactive_heat_generation.ipynb
 
-- Geothermal gradient of continental lithosphere
-        
-- Cooling of oceanic lithosphere
+```
 
-- Plate cooling model
+```{toctree}
+---
+titlesonly:
+maxdepth: 1
+---
+notebooks/heat-flow/heat-flow-module-L0/5_radioactivity_generated_by_dominant_elements.ipynb
+
+```
+
+```{toctree}
+---
+titlesonly:
+maxdepth: 1
+---
+notebooks/heat-flow/heat-flow-module-L0/6_plotting_world_surface_heat_flow.ipynb
+
+```
+
+```{toctree}
+---
+titlesonly:
+maxdepth: 1
+---
+notebooks/heat-flow/heat-flow-module-L0/7_geothermal_gradient_computation.ipynb
+
+```
+
+
+```{toctree}
+---
+titlesonly:
+maxdepth: 1
+---
+notebooks/heat-flow/heat-flow-module-L0/8_cooling_of_oceanic_lithosphere.ipynb
+
+```
+
+```{toctree}
+---
+titlesonly:
+maxdepth: 1
+---
+notebooks/heat-flow/heat-flow-module-L0/9_plate_cooling_model_of_lithosphere.ipynb
+
+```
