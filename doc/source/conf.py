@@ -22,6 +22,7 @@ extensions = [
 redirects = {
     "geodynamic-modeling": "notebooks/geodynamic-modeling/geodynamic_modeling-L0/0_main_geodynamic_modeling.html",
     "elasticity-flexure": "notebooks/elasticity-flexure/elasticity-flexure-L0/0_overview-elasticity-flexure.html",
+    "heat-flow": "notebooks/heat-flow/heat-flow-module-L0/0_overview-heat-flow-module.html",
 }
 myst_enable_extensions = [
     "dollarmath",
