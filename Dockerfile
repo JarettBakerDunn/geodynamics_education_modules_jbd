@@ -18,6 +18,8 @@ RUN pip3 install --upgrade pip
 RUN pip3 install cartopy;
 
 RUN echo "geodynamics:a" | chpasswd
+# Disallow geodynamics user to use sudo
+RUN gpasswd -d geodynamics sudo
 
 USER geodynamics
 
