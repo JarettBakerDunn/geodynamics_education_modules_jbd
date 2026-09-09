@@ -20,6 +20,7 @@ extensions = [
     'myst_nb',
 ]
 redirects = {
+    "melt": "notebooks/melt/melt-L0/0_overview_melt.html",
     "geodynamic-modeling": "notebooks/geodynamic-modeling/geodynamic_modeling-L0/0_main_geodynamic_modeling.html",
     "elasticity-flexure": "notebooks/elasticity-flexure/elasticity-flexure-L0/0_overview-elasticity-flexure.html",
 }
