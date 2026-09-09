@@ -1,47 +1,17 @@
 # Melt
 
-## Description
 
-An introduction to melt generation and surface volcanism in context of a rising mantle plume.
 
-## Learning objectives
-
-### Scientific
-Upon completion of this module you would be familiar with:
-- Melting in different tectonic settings
-- Physical parameters that control plume ascension
-- Fractional melting and melt extraction
-
-### Technical
-Upon completion of this module you will be able to:
-- Run ASPECT from the command line
-- Understand the basic layout of a model simulation file
-- Visualize model simulation results using Python
-
-## Dependencies
-- Python (> version 3.3) with the following libraries installed:
-  * Matplotlib
-  * NumPy
-  * PyVista
-
-- ASPECT (> version 3.0)
-
-<br>
-
+```{toctree}
 ---
-
-## Table of Contents
-
-- Summary
-
-- Melt generation
-
-- Fractional crystallization
-
-- Plume generation
-
-- Plot parameterized melting curves
-
-- ASPECT.prm file description
-
-- Plotting melt models
+titlesonly:
+maxdepth: 1
+---
+notebooks/melt/melt-L0/0_overview_melt.ipynb
+notebooks/melt/melt-L0/1_melt_generation.ipynb
+notebooks/melt/melt-L0/2_fractional_crystallization.ipynb
+notebooks/melt/melt-L0/3_plume_generation.ipynb
+notebooks/melt/melt-L0/4_plot_parameterized_melting_curves.ipynb
+notebooks/melt/melt-L0/5_melting_prm_description.ipynb
+notebooks/melt/melt-L0/6_plotting_melt_model.ipynb
+```
