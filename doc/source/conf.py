@@ -21,8 +21,10 @@ extensions = [
 ]
 redirects = {
     "melt": "notebooks/melt/melt-L0/0_overview_melt.html",
+    "mantle-dynamics": "notebooks/mantle-dynamics/mantle-dynamics-L0/0_overview_mantle_dynamics_L0.html",
     "geodynamic-modeling": "notebooks/geodynamic-modeling/geodynamic_modeling-L0/0_main_geodynamic_modeling.html",
     "elasticity-flexure": "notebooks/elasticity-flexure/elasticity-flexure-L0/0_overview-elasticity-flexure.html",
+    "heat-flow": "notebooks/heat-flow/heat-flow-module-L0/0_overview-heat-flow-module.html",
 }
 myst_enable_extensions = [
     "dollarmath",
