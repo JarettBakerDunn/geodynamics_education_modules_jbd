@@ -5,6 +5,7 @@
 
 ```{toctree}
 ---
+caption: Overview
 titlesonly:
 maxdepth: 1
 ---
