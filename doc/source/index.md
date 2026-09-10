@@ -1,12 +1,13 @@
-<div align="center" >
+<div align="center" width="50%">
 
-<div height="500px">
+<img src="../../assets/education-gem-notebooks_icon.png" width="75%">
 
-![ ](../../assets/education-gem-notebooks_icon.png)
+<br>
+<br>
+<br>
+<br>
 
-</div>
-
-![ ](../../assets/cig-logo.png)
+<img src="../../assets/cig-logo.png" width="25%">
 
 </div>
 
