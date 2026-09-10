@@ -28,7 +28,9 @@ redirects = {
     "elasticity-flexure": "notebooks/elasticity-flexure/elasticity-flexure-L0/0_overview-elasticity-flexure.html",
     "heat-flow": "notebooks/heat-flow/heat-flow-module-L0/0_overview-heat-flow-module.html",
     "rifting": "notebooks/rifting/rifting-L0/0_overview_rifting.html",
-}
+    "stress-strain": "notebooks/stress-strain/stress-strain-module-L0/0_overview_stress_strain_L0.html"
+    }
+
 myst_enable_extensions = [
     "dollarmath",
     "amsmath",
