@@ -30,7 +30,7 @@ redirects = {
     "rifting": "notebooks/rifting/rifting-L0/0_overview_rifting.html",
     "stress-strain": "notebooks/stress-strain/stress-strain-module-L0/0_overview_stress_strain_L0.html"
     }
-}
+
 myst_enable_extensions = [
     "dollarmath",
     "amsmath",
