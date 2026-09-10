@@ -1,43 +1,19 @@
 # Rheology
 
-## Description
-
-An introduction to rheology and its application in geodynamics. This module covers the fundamental concepts of rheology, including elastic, viscoelastic, viscous, and brittle behavior of materials. This module also explore how to interpret common geophysical observations in terms of the physical properties.
-
-## Learning objectives
-
-### Scientific
-Upon completion of this module you would be familiar with:
-
-- Brittle and ductile deformation
-- Viscoelastic deformation
-- Viscoplastic deformation
-- Viscous rheology under composite creep
-- Stokes sinker benchmark
 
 
-### Technical
-Upon completion of this module you would be familiar with:
-
- - PyVista for model output visualization
- - the layout of Material Models in the model simulation files of ASPECT
-
-<br>
-
+```{toctree}
 ---
-
-## Table of Contents
-
-- Summary
-
-- Viscoelastic deformation
-
-- Viscoplastic deformation
-
-- Composite rheology
-
-- Modeling different deformation types
-
-- Plotting simulated deformation types
-
-- Stokes benchmark
+caption: Overview
+titlesonly:
+maxdepth: 1
+---
+notebooks/rheology/rheology-L0/0_overview-rheology.ipynb
+notebooks/rheology/rheology-L0/1_deformation_types.ipynb
+notebooks/rheology/rheology-L0/2_visco_elastic_deformation.ipynb
+notebooks/rheology/rheology-L0/3_visco_plastic_deformation.ipynb
+notebooks/rheology/rheology-L0/4_viscous_rheology.ipynb
+notebooks/rheology/rheology-L0/5_modeling_viscous_elastic_plastic_deformation.ipynb
+notebooks/rheology/rheology-L0/6_plot_simulated_deformation_types.ipynb
+notebooks/rheology/rheology-L0/7_stokes_flow_benchmark.ipynb
+```
