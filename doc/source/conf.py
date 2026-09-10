@@ -20,6 +20,7 @@ extensions = [
     'myst_nb',
 ]
 redirects = {
+    "phase-transitions": "notebooks/phase-transitions/phase-transitions-L0/0_overview_phase_transitions.html",
     "melt": "notebooks/melt/melt-L0/0_overview_melt.html",
     "mantle-dynamics": "notebooks/mantle-dynamics/mantle-dynamics-L0/0_overview_mantle_dynamics_L0.html",
     "geodynamic-modeling": "notebooks/geodynamic-modeling/geodynamic_modeling-L0/0_main_geodynamic_modeling.html",
