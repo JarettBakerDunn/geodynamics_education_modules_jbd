@@ -7,8 +7,8 @@
 set Dimension                              = 2
 set Start time                             = 0
 set End time                               = 1e4
-set Use years in output instead of seconds = true
-set Resume computation                     = false
+set Use years instead of seconds           = true
+set Resume computation                     = true
 set CFL number                             = 0.1
 set Maximum time step                      = 1e3
 set Use operator splitting                 = true
@@ -79,7 +79,7 @@ end
 
 
 subsection Initial composition model
-  set Model name = function
+  set List of model names = function
   subsection Function
     set Variable names      = x,y
     set Function constants  = x0=15e3,  
@@ -106,7 +106,7 @@ end
 
 # Temperature initial conditions
 subsection Initial temperature model
-  set Model name = function
+  set List of model names = function
   subsection Function
     set Function expression = 293
   end
@@ -120,7 +120,7 @@ subsection Material model
     set Densities            = 3200, 3200, 3200, 3200, 3200, 3200, 3200, 3400
     set Viscosities          = 1.e19, 1.e19, 1.e19, 1.e19, 1.e19, 1.e19, 1.e19, 1.e21
     set Elastic shear moduli = 1.e14, 1.e14, 1.e14, 1.e14, 1.e14, 1.e14, 1.e14, 80.e7
-    set Fixed elastic time step     = 1e2
+    set Fixed elastic time step     = 1e3
     set Use fixed elastic time step = true
     set Viscosity averaging scheme  =  arithmetic
     set Thermal expansivities = 0

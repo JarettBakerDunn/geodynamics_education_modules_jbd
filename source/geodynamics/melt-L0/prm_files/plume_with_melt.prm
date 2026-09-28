@@ -1,8 +1,8 @@
 set Dimension                              = 2
 set Start time                             = 0
-set End time                               = 5e6
+set End time                               = 4.5e6
 set CFL number                             = 1
-set Use years in output instead of seconds = true
+set Use years instead of seconds           = true
 set Output directory                       = plume-with-melt
 set Adiabatic surface temperature          = 1623
 set Use operator splitting                 = true
@@ -96,7 +96,7 @@ subsection Boundary velocity model
 end
 
 subsection Boundary composition model
-  set Model name =  initial composition
+  set List of model names = initial composition
 end
 
 subsection Compositional fields
@@ -124,7 +124,7 @@ subsection Melt settings
 end
 
 subsection Initial composition model
-  set Model name = function
+  set List of model names = function
 
   subsection Function
     set Function constants        = r=100000, amplitude=0.5

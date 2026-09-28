@@ -82,7 +82,7 @@ end
 # matches the boundary conditions defined below plus
 # a small perturbation:
 subsection Initial temperature model
-  set Model name = function
+  set List of model names = function
   subsection Function
     set Variable names      = x,y
     set Function constants  = p=-0.01, L=4.2e6, D=3e6, pi=3.1415926536, k=1, T_top=273, T_bottom=3600

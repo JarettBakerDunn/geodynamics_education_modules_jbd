@@ -4,7 +4,7 @@ set Dimension                              = 2
 set Start time                             = 0
 set End time                               = 5e6
 set CFL number                             = 1
-set Use years instead of seconds = true
+set Use years instead of seconds           = true
 set Output directory                       = plume
 set Adiabatic surface temperature          = 1573 #after Afonso et al. (2007)
 
