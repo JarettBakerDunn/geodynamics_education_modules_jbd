@@ -18,7 +18,7 @@
 set Dimension                              = 2
 set Start time                             = 0
 set End time                               = 2e5
-set Use years in output instead of seconds = true
+set Use years instead of seconds           = true
 set Nonlinear solver scheme                = iterated Advection and Stokes
 set Nonlinear solver tolerance             = 1e-5
 set Max nonlinear iterations               = 20
@@ -145,7 +145,7 @@ end
 # set to 0, while the initial plastic strain is randomized
 # between 0.5 and 1.5.
 subsection Initial composition model
-  set Model name = function
+  set List of model names = function
 
   subsection Function
     set Variable names      = x,y

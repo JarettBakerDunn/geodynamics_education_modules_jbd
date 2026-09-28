@@ -4,7 +4,7 @@ set Dimension                              = 2
 set Start time                             = 0
 set End time                               = 2e7
 set CFL number                             = 1
-set Use years in output instead of seconds = true
+set Use years instead of seconds           = true
 set Output directory                       = subduction
 set Adiabatic surface temperature          = 1573
 set World builder file                     = ./prm_files/plates.wb
@@ -76,7 +76,7 @@ subsection Initial temperature model
 end
 
 subsection Boundary temperature model
-  set Model name = box	
+  set List of model names = box	
   set Fixed temperature boundary indicators   = top, bottom
 
   subsection Box
