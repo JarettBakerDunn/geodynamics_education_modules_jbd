@@ -62,17 +62,17 @@ end
 
 # Number and name of compositional fields
 subsection Compositional fields
-  set Number of fields = 7
-  set Names of fields  = ve_stress_xx, ve_stress_yy, ve_stress_xy, ve_stress_xx_old, ve_stress_yy_old, ve_stress_xy_old,  slab
-  set Types of fields  = stress, stress, stress, stress, stress, stress, chemical composition
+  set Number of fields = 4
+  set Names of fields  = ve_stress_xx, ve_stress_yy, ve_stress_xy,  slab
+  set Types of fields  = stress, stress, stress, chemical composition
 end
 
 subsection Initial composition model
-  set Model name = function
+  set List of model names = function
   subsection Function
     set Variable names      = x,y
     set Function constants  = x0=15e3,  
-    set Function expression = 0; 0; 0; 0; 0; 0; if ( y>50e3 && y<150e3,  0.5+0.5*tanh((x-x0)/1000), 0 )
+    set Function expression = 0; 0; 0; if ( y>50e3 && y<150e3,  0.5+0.5*tanh((x-x0)/1000), 0 )
   end
 end
 
@@ -95,7 +95,7 @@ end
 
 # Temperature initial conditions
 subsection Initial temperature model
-  set Model name = function
+  set List of model names = function
   subsection Function
     set Function expression = 293
   end
