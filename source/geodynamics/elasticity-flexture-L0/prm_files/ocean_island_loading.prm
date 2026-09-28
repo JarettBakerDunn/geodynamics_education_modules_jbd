@@ -6,7 +6,7 @@ set Start time                             = 0
 set End time                               = 100000
 set Use years in output instead of seconds = true
 set CFL number                             = 0.001
-set Maximum time step                      = 3e3
+set Maximum time step                      = 1e2
 set Output directory                       = ocean-island-loading
 set Pressure normalization                 = no
 set Use operator splitting                 = true
@@ -90,7 +90,7 @@ end
 
 # We set the elastic thickness of the lithosphere to 34 km
 subsection Initial composition model
-  set Model name = function
+  set List of model names = function
   subsection Function
     set Variable names      = x,y
     set Function constants  = y0=400000, lithosphere_thickness=34000
@@ -117,7 +117,7 @@ end
 
 # Temperature initial conditions
 subsection Initial temperature model
-  set Model name = function
+  set List of model names = function
   subsection Function
     set Function expression = 293
   end
@@ -132,8 +132,8 @@ subsection Material model
     set Densities            = 3300
     set Viscosities          = 2.e19, 1.e26, 1.e26, 1.e26, 1.e26, 1.e26, 1.e26, 1.e26
     set Elastic shear moduli = 1.e12, 1.e12, 1.e12, 1.e12, 1.e12, 1.e12, 1.e12, 70.e9
-    set Fixed elastic time step     = 1e3
-    set Use fixed elastic time step = false
+    set Fixed elastic time step     = 1e2
+    set Use fixed elastic time step = true
     set Viscosity averaging scheme  = maximum composition
     set Thermal expansivities = 0
   end
@@ -164,6 +164,6 @@ end
 
 subsection Termination criteria
   set Termination criteria = end step
-  set End step = 500
+  set End step = 1000
   set Checkpoint on termination = true
 end

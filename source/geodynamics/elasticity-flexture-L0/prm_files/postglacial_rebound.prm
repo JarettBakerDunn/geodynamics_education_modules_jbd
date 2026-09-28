@@ -4,7 +4,7 @@
 set Dimension                              = 2
 set Start time                             = 0
 set End time                               = 200000
-set Use years in output instead of seconds = true
+set Use years instead of seconds           = true
 set Resume computation                     = false
 set CFL number                             = 0.001
 set Maximum time step                      = 5e3
@@ -25,7 +25,7 @@ subsection Geometry model
   set Model name = box
 
   subsection Box
-    set X repetitions = 2
+    set X repetitions = 12
     set Y repetitions = 1
     set X extent      = 6000000
     set Y extent      = 400000
@@ -52,8 +52,8 @@ subsection Discretization
   set Use discontinuous composition discretization = true
   subsection Stabilization parameters
       set Use limiter for discontinuous composition solution = true
-      set Global composition maximum =  1.e11,  1.e11,  1.e11, 1.e11,  1.e11,  1.e11, 1.0
-      set Global composition minimum = -1.e11, -1.e11, -1.e11, -1.e11, -1.e11, -1.e11, 0.0
+      set Global composition maximum =  1.e11,  1.e11,  1.e11, 1.0
+      set Global composition minimum = -1.e11, -1.e11, -1.e11, 0.0
   end
 end
 
@@ -85,18 +85,18 @@ end
 
 # Number and name of compositional fields
 subsection Compositional fields
-  set Number of fields = 7
-  set Names of fields  = ve_stress_xx, ve_stress_yy, ve_stress_xy, ve_stress_xx_old, ve_stress_yy_old, ve_stress_xy_old, lithosphere
-  set Types of fields  = stress, stress, stress, stress, stress,  stress,  chemical composition
+  set Number of fields = 4
+  set Names of fields  = ve_stress_xx, ve_stress_yy, ve_stress_xy, lithosphere
+  set Types of fields  = stress, stress, stress,  chemical composition
 end
 
 # We set the elastic thickness of the lithosphere to 80 km
 subsection Initial composition model
-  set Model name = function
+  set List of model names = function
   subsection Function
     set Variable names      = x,y
     set Function constants  = 
-    set Function expression = 0; 0; 0; 0; 0; 0; 0.5+0.5*tanh((y-320000)/10000)
+    set Function expression = 0; 0; 0; 0.5+0.5*tanh((y-320000)/10000)
   end
 end
 
@@ -119,7 +119,7 @@ end
 
 # Temperature initial conditions
 subsection Initial temperature model
-  set Model name = function
+  set List of model names = function
   subsection Function
     set Function expression = 293
   end
@@ -132,11 +132,10 @@ subsection Material model
 
   subsection Viscoelastic
     set Densities            = 3300
-    set Viscosities          = 5.e19, 1.e24, 1.e24, 1.e24, 1.e24, 1.e24, 1.e24, 1.e24
-    set Elastic shear moduli = 1.e12, 1.e12, 1.e12, 1.e12, 1.e12, 1.e12, 1.e12, 70.e9
+    set Viscosities          = 5.e19, 1.e24, 1.e24, 1.e24, 1.e24
+    set Elastic shear moduli = 1.e12, 1.e12, 1.e12, 1.e12, 70.e9
     set Fixed elastic time step     = 1e3
     set Use fixed elastic time step = false
- #   set Use stress averaging        = false 
     set Viscosity averaging scheme  = maximum composition
     set Thermal expansivities = 0
   end
