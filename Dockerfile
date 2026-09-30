@@ -1,4 +1,4 @@
-FROM geodynamics/aspect:v3.0.0 AS aspect
+FROM geodynamics/aspect:v3.1.0 AS aspect
 
 USER root
 
