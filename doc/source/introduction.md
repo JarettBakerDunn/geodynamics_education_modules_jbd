@@ -41,16 +41,19 @@ Navigate to `geodynamics_education_modules/source/` to find all education resour
 These resources can be configured to run on [ACCESS Jetstream](https://support.access-ci.org/tags/jetstream). Please [inquire](https://geodynamics.org/support/ticket/new).
 
 ### HubZero
-For personal use or use by small groups, these notebooks can be accessed via [HubZero resources](https://geodynamics.org/resources/tools) using the `ASPECT Jupyter Notebooks` tool. You must be logged in to geodynamics.org to launch a tool.
-
-This tool currently does not work with all modules that use ASPECT but can be used for visualizing results.
+For personal use or use by small groups, these notebooks can be accessed via [HubZero resources](https://geodynamics.org/resources/tools) using the `Jupyter Notebook (2026)- Rocky Linux 10` tool. You must be logged in to geodynamics.org to launch a tool.
 
 To access the shared space, you will need to copy the modules from the shared drive (read only) to your home directory. In a new terminal window, use the following command:
 
 ```{code-block} bash
 $ cp -r /data/tools/education-modules/ $HOME
 ```
-You can access the notebooks by navigating inside the copied folder `~/education-modules/source/geodynamics`.
+You can access the notebooks by navigating inside the copied folder `~/education-modules/source/geodynamics`. To use ASPECT in the notebooks, you will need to add the following lines in a cell before invoking ASPECT:
+
+```{code-block} bash
+import hublib.use
+%use aspect-3.1.0
+```
 
 ## Contributing
 
