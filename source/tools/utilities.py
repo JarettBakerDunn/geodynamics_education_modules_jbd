@@ -29,7 +29,7 @@ def read_statistics(fname):
                 header_read = False
 
     # Read the data here
-    values = pd.read_csv(fname, skiprows=len(header), header=None, delim_whitespace=True, names=header)
+    values = pd.read_csv(fname, skiprows=len(header), header=None,  sep=r'\s+', names=header)
     return values
 
 
