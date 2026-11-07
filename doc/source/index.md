@@ -18,21 +18,32 @@
 
 ```{toctree}
 ---
-caption: Table of Contents
+caption: Geodynamics
 hidden: True
 maxdepth: 1
 ---
-preface.rst
-introduction.md
-geodynamic-modeling.md
-heat-flow.md
-mantle-dynamics.md
-elasticity-flexure.md
-stress-strain.md
-rheology.md
-phase-transitions.md
-melt.md
-rifting.md
-subduction.md
+geodynamics/preface.rst
+geodynamics/introduction.md
+geodynamics/geodynamic-modeling.md
+geodynamics/heat-flow.md
+geodynamics/mantle-dynamics.md
+geodynamics/elasticity-flexure.md
+geodynamics/stress-strain.md
+geodynamics/rheology.md
+geodynamics/phase-transitions.md
+geodynamics/melt.md
+geodynamics/rifting.md
+geodynamics/subduction.md
+
+```
+
+```{toctree}
+---
+caption: AI / ML
+hidden: True
+maxdepth: 1
+---
+ML_geoscience/intro-concepts.md
+
 
 ```

@@ -13,7 +13,7 @@ The geology path focuses on qualitative to semi-quantitative understanding of Ea
 where students encounter the governing equations but are not expected to solve them. 
 The geophysics path is more quantitative, requiring a strong physics background and emphasizing deriving and solving those equations.
 
-.. figure:: ../../assets/venn_diagram-programming_geo.png
+.. figure:: ../../../assets/venn_diagram-programming_geo.png
     :width: 80%
     :align: center
     :alt: Figure illustrates five domains (A–E) where CIG can contribute by using its software to support geodynamical concepts and computational methods. Domains A, B, and C represent upper-division courses of increasing complexity; D and E are research-intensive graduate and postgraduate programs.
@@ -107,14 +107,14 @@ The typical notebook should include:
 
 3. Numerical  section, where the geodynamic topic is addressed numerically using CIG software. This would allow the student to acquire and apply computational modeling skills.
 
-.. figure:: ../../assets/nb_template.png
+.. figure:: ../../../assets/nb_template.png
     :width: 100%
     :align: center
 
 Development strategy
 ----------------------------
 
-.. figure:: ../../assets/dev-strategy.png
+.. figure:: ../../../assets/dev-strategy.png
     :width: 100%
     :align: center
 
