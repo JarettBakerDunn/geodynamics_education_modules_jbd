@@ -1,0 +1,22 @@
+# Geodynamics
+
+```{toctree}
+---
+caption: Geodynamics
+hidden: True
+maxdepth: 1
+---
+preface.rst
+introduction.md
+geodynamic-modeling.md
+heat-flow.md
+mantle-dynamics.md
+elasticity-flexure.md
+stress-strain.md
+rheology.md
+phase-transitions.md
+melt.md
+rifting.md
+subduction.md
+
+```
