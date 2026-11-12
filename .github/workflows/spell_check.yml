@@ -4,7 +4,7 @@ on:
     branches:
       - 'main'
   pull_request:
-  workflow-dispatch:
+  workflow_dispatch: 
 
 concurrency:
   group: ${{ github.actor }}-${{ github.ref }}-typos
