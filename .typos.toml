@@ -2,9 +2,11 @@
 check-file = false
 check-filename = false
 
-[type.ipynb]
-check-file = true
-check-filename = true
+extend-exclude = [
+  "*",
+  "!*/",
+  "!*.ipynb",
+]
 
 [default.extend-words]
 # Don't correct abbreviations of the Boussinesq approximation
