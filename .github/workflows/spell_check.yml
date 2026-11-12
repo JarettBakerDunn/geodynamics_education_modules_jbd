@@ -36,7 +36,7 @@ jobs:
         uses: crate-ci/typos@v1.19.0
         with:
           write_changes: true
-          files: *.ipynb
+          files: "*.ipynb"
       - name: Store typos diff file
         run:  git diff > changes-typos.diff
       - name: archive typos results
