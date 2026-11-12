@@ -36,7 +36,6 @@ jobs:
         uses: crate-ci/typos@v1.19.0
         with:
           write_changes: true
-          config: ./.typos.toml
           files: .
       - name: Store typos diff file
         run:  git diff > changes-typos.diff
