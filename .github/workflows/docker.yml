@@ -43,7 +43,6 @@ jobs:
         uses: docker/build-push-action@v6 
         with:
           context: ./docker/geodynamics
-          file: Dockerfile
           cache-from: type=registry,ref=ubuntu:25.10
           cache-to: type=inline
           platforms: linux/amd64,linux/arm64
@@ -55,7 +54,6 @@ jobs:
         uses: docker/build-push-action@v6 
         with:
           context: ./docker/ML_geoscience
-          file: Dockerfile
           cache-from: type=registry,ref=ubuntu:25.10
           cache-to: type=inline
           platforms: linux/amd64,linux/arm64
