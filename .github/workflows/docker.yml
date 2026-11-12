@@ -39,10 +39,10 @@ jobs:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
   
-      - name: Build and push Docker image
+      - name: Build and push geodynamics Docker image
         uses: docker/build-push-action@v6 
         with:
-          context: ./
+          context: ./docker/geodynamics
           file: Dockerfile
           cache-from: type=registry,ref=ubuntu:25.10
           cache-to: type=inline
@@ -50,3 +50,15 @@ jobs:
           push: true
           tags: |
             geodynamics/${{ secrets.DOCKERHUB_PROJECT_NAME}}
+
+      - name: Build and push ml/ai Docker image
+        uses: docker/build-push-action@v6 
+        with:
+          context: ./docker/ML_geoscience
+          file: Dockerfile
+          cache-from: type=registry,ref=ubuntu:25.10
+          cache-to: type=inline
+          platforms: linux/amd64,linux/arm64
+          push: true
+          tags: |
+            geodynamics/${{ secrets.DOCKERHUB_ML_PROJECT_NAME}}            
