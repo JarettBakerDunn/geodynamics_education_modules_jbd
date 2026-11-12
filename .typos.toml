@@ -1,0 +1,31 @@
+[default]
+check-file = false
+check-filename = false
+
+[type.ipynb]
+check-file = true
+check-filename = true
+
+[default.extend-words]
+# Don't correct abbreviations of the Boussinesq approximation
+BA = "BA"
+ba = "ba"
+
+# Don't correct some other abbreviations
+FOT = "FOT"
+ND = "ND"
+
+# Don't correct abbreviations for some minerals
+Fo = "Fo"
+En = "En"
+Qtz = "Qtz"
+Wad = "Wad"
+
+# Don't check the following files
+[files]
+extend-exclude = [
+    "*.svg",
+    "*.pvsm",
+    "*.vtu",
+    "*.txt",
+  ] 
