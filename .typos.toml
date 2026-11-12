@@ -1,4 +1,8 @@
 [default]
+extend-ignore-identifiers-re = [
+    # Ignore jupyter Cell Ids
+    "^[a-zA-Z0-9_-]{36}$",
+]
 
 [default.extend-words]
 # Don't correct abbreviations of the Boussinesq approximation
