@@ -19,6 +19,9 @@ En = "En"
 Qtz = "Qtz"
 Wad = "Wad"
 
+# This is a last name which the spell checker flagged by mistake
+Wirth="Wirth"
+
 # Don't check the following files
 [files]
 extend-exclude = [
