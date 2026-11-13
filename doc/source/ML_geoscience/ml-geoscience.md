@@ -8,5 +8,7 @@ maxdepth: 1
 ---
 preface.rst
 intro-concepts.md
+dimensionality_reduction.md
+regression.md
 
 ```

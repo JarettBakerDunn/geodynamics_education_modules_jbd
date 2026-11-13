@@ -32,7 +32,9 @@ redirects = {
     "geodynamics/rifting": "../notebooks/rifting/rifting-L0/0_overview_rifting.html",
     "geodynamics/stress-strain": "../notebooks/stress-strain/stress-strain-module-L0/0_overview_stress_strain_L0.html",
     "ML_geoscience/ml-geoscience": "preface.html",
-    "ML_geoscience/intro-concepts": "../notebooks/intro-concepts/intro-concepts/0_intro_concepts.html"
+    "ML_geoscience/intro-concepts": "../notebooks/intro-concepts/intro-concepts/0_intro_concepts.html",
+    "ML_geoscience/dimensionality_reduction": "../notebooks/dimensionality_reduction/dimensionality_reduction/0_overview.html",
+    "ML_geoscience/regression": "../notebooks/regression/regression/0_overview.html"
     }
 
 myst_enable_extensions = [
