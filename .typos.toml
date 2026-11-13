@@ -1,7 +1,7 @@
 [default]
 extend-ignore-identifiers-re = [
     # Ignore jupyter Cell Ids
-    "id"\s*:\s*"[A-Za-z0-9_-]{12}",
+    '"id"\s*:\s*"[A-Za-z0-9_-]{12}"',
 ]
 
 [default.extend-words]
