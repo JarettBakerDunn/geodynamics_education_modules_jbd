@@ -18,6 +18,6 @@ dependencies:
   - pandas
   - scikit-learn
   - shap
+  - burnman
   - pip:
       - nbsphinx
-      - burnman
