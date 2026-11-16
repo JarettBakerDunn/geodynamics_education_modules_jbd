@@ -44,11 +44,15 @@ myst_enable_extensions = [
 ]
 
 # myst-nb settings to generate the plot outputs. This is currently set
-# to never execute the cells.
-nb_execution_mode = "off"
+# to never execute the geodynamics notebooks.
+nb_execution_mode = "force"
 nb_execution_timeout = -1
 suppress_warnings = ["myst.header"]
 myst_heading_anchors = 4
+nb_execution_excludepatterns = [
+    "source/geodynamics/*",
+]
+
 
 templates_path = ['_templates']
 
