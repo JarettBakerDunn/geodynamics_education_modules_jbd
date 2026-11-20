@@ -4,8 +4,6 @@ Geodynamics relies heavily on computational modeling to advance our understandin
 
 The aim of this initiative is to develop modular teaching resources for upper-division and graduate geodynamics courses that integrate computational methods and CIG tools within a Jupyter Notebook environment.
 
-For more background on this initiative, see the [Preface](index.md).
-
 ## How to Use
 
 The modules can be used independently or combined to build more advanced materials and tutorials for CIG software workshops, supporting both coursework and hands-on training. If you are new to computational modeling, begin with the first notebook *Geodynamic Modeling* based on [Zelst et al. (2022)](https://doi.org/10.5194/se-13-583-2022)
@@ -34,6 +32,14 @@ Next, open a browser window to:
 &nbsp; &nbsp; http://localhost:8000/
 
 Navigate to `geodynamics_education_modules/source/` to find all education resources. The education resources for this series are located in `geodynamics/`.
+
+The process is the same in order to access the AI/ML for geoscience module, except that you need to download a different docker container:
+
+```{code-block} bash
+$ docker pull geodynamics/ml_ai_education_modules
+$ docker run -p 8000:8000 -it --rm geodynamics/ml_ai_education_modules
+$ 
+```
 
 
 ### Jetstream
