@@ -1,7 +1,7 @@
 [default]
 extend-ignore-re = [
     # Ignore jupyter Cell Ids
-    '"id"\s*:\s*"[A-Za-z0-9_-]{12}"',
+    '"id"\s*:\s*"[A-Za-z0-9_-]{8,12}"',
 ]
 
 [default.extend-words]
@@ -12,6 +12,10 @@ ba = "ba"
 # Don't correct some other abbreviations
 FOT = "FOT"
 ND = "ND"
+SOM = "SOM"
+Parana = "Parana"
+MORB = "MORB"
+MORBs = "MORBs"
 
 # Don't correct abbreviations for some minerals
 Fo = "Fo"
