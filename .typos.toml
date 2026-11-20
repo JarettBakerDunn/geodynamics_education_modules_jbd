@@ -15,6 +15,7 @@ ND = "ND"
 SOM = "SOM"
 Parana = "Parana"
 MORB = "MORB"
+MOR = "MOR"
 MORBs = "MORBs"
 
 # Don't correct abbreviations for some minerals
